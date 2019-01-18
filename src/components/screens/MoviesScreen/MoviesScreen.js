@@ -1,8 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, View, FlatList } from "react-native";
 import { inject, observer } from "mobx-react";
-import MovieItem from "../MoviePage/MovieItem";
-import Filters from "../Filters/Filters";
+import MovieItem from "./MoviePage/MovieItem";
+import Header from "../../Header/Header";
 
 @inject("moviesPageStore")
 @observer
@@ -12,10 +12,11 @@ class MoviesScreen extends React.Component {
 	}
 
 	render() {
-		const { isLoading, movies } = this.props.moviesPageStore;
+		const { isLoading, movies, openFilters } = this.props.moviesPageStore;
 		return (
 			<View style={styles.container}>
-				<Filters style={{ height: 150 }} />
+				<Header />
+				{/* <Filters style={{ height: 150 }} /> */}
 				<View style={{ flex: 1 }}>
 					{isLoading ? (
 						<Text>...loading</Text>
@@ -36,8 +37,6 @@ class MoviesScreen extends React.Component {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		marginTop: 50,
-		paddingHorizontal: 20,
 		backgroundColor: "#FFFF"
 	}
 });

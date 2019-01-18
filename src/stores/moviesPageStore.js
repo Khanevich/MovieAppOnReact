@@ -1,5 +1,6 @@
 import { observable, action, values, reaction } from "mobx";
 import CallApi from "../api/api";
+import { Actions } from "react-native-router-flux";
 
 const initialFilters = {
 	sort_by: "popularity.desc",
@@ -123,6 +124,11 @@ class MoviesPageStore {
 				value: []
 			}
 		});
+	};
+
+	@action
+	goFilters = () => {
+		Actions.movies();
 	};
 
 	@action
