@@ -54,9 +54,9 @@ class LoginFormStore {
 	};
 
 	@action
-	onChangeSubmitting = nos => {
+	onChangeSubmitting = sub => {
 		console.log("submitted");
-		this.submitting = nos;
+		this.submitting = sub;
 	};
 
 	@action

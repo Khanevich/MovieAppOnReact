@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, FlatList } from "react-native";
 import { inject, observer } from "mobx-react";
 import MovieItem from "./MoviePage/MovieItem";
 import Header from "../../Header/Header";
+import Loader from "../../Loader/Loader";
 
 @inject("moviesPageStore")
 @observer
@@ -16,10 +17,9 @@ class MoviesScreen extends React.Component {
 		return (
 			<View style={styles.container}>
 				<Header />
-				{/* <Filters style={{ height: 150 }} /> */}
 				<View style={{ flex: 1 }}>
 					{isLoading ? (
-						<Text>...loading</Text>
+						<Loader />
 					) : (
 						<FlatList
 							style={{ flex: 1 }}
