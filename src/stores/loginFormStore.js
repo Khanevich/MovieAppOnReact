@@ -6,8 +6,8 @@ import { Actions } from "react-native-router-flux";
 class LoginFormStore {
 	@observable
 	values = {
-		username: null,
-		password: null
+		username: "StasKhanevich",
+		password: "terka2312"
 	};
 
 	@observable
@@ -93,7 +93,8 @@ class LoginFormStore {
 				});
 			})
 			.then(user => {
-				// userStore.updateAuth(user, session_id);
+				userStore.updateAuth(user, session_id);
+				console.log("getUser", user);
 				this.onChangeSubmitting(false);
 				Actions.movies();
 			})

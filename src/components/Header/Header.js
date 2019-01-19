@@ -1,14 +1,36 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 import styles from "./styles";
-import { Ionicons } from "@expo/vector-icons";
+import { Icon } from "react-native-elements";
+import { inject, observer } from "mobx-react";
+import { Actions } from "react-native-router-flux";
 
+@inject("userStore")
+@observer
 class Header extends React.Component {
 	render() {
+		const { user } = this.props.userStore;
+
 		return (
 			<View style={styles.header}>
-				<Ionicons name="football" color="white" />
-				<Text>Hello</Text>
+				<Icon
+					name="filter"
+					type="foundation"
+					color="#FFF"
+					style={styles.icon}
+					onPress={() => {
+						Actions.filters();
+					}}
+				/>
+				<Text style={styles.text}>Hello</Text>
+				<Image
+					style={styles.avatar}
+					source={{
+						uri: `https://secure.gravatar.com/avatar/${
+							user.avatar.gravatar.hash
+						}.jpg?s=64"`
+					}}
+				/>
 			</View>
 		);
 	}

@@ -23,13 +23,9 @@ class Root extends React.Component {
 							component={LoginFormScreen}
 							title="Login"
 							hideNavBar
-						/>
-						<Scene
-							key="movies"
-							component={MoviesScreen}
-							title="Movies"
 							initial
 						/>
+						<Scene key="movies" component={MoviesScreen} title="Movies" />
 						<Scene key="filters" component={FiltersScreen} title="Filters" />
 					</Stack>
 				</Router>
