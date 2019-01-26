@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, Button } from "react-native";
 import { inject, observer } from "mobx-react";
 import styles from "./styles";
 import RNPickerSelect from "react-native-picker-select";
@@ -96,14 +96,31 @@ class Filters extends React.Component {
             style={{ ...styles }}
           />
 
-          <TouchableOpacity
+          {/* <TouchableOpacity
             style={styles.buttonContainer}
             onPress={() => {
               Actions.movies();
             }}
           >
             <Text style={styles.buttonText}>Return to movies </Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
+          <View style={styles.filterButtons}>
+            <Button
+              title="Return to movies"
+              style={styles.buttonContainer}
+              onPress={() => {
+                Actions.movies();
+              }}
+            />
+
+            {/* <Button
+              title="Next"
+              style={styles.buttonContainer}
+              onPress={nextPage}
+            >
+              Reset filters
+            </Button> */}
+          </View>
         </View>
       </View>
     );

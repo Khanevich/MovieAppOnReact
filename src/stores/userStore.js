@@ -25,7 +25,7 @@ class UserStore {
     try {
       await AsyncStorage.setItem("session_id", session_id);
     } catch {
-      console.log("Error saving data", error.message);
+      console.log("Error saving data");
     }
   };
 
@@ -33,8 +33,8 @@ class UserStore {
     let session_id = "";
     try {
       session_id = await AsyncStorage.getItem("session_id", session_id);
-    } catch (error) {
-      console.log("Error getting data", error.message);
+    } catch {
+      console.log("Error getting data");
     }
     return session_id;
   };
@@ -51,7 +51,7 @@ class UserStore {
       })
       .catch(error => {
         this.submitting = false;
-        console.log("Error getting data", error.message);
+        console.log("Error getting data", error);
       });
   };
 }

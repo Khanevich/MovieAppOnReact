@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions } from "react-native";
+import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   footer: {
@@ -7,11 +7,11 @@ export default StyleSheet.create({
     marginBottom: 40
   },
 
-  buttonContainer: {
-    backgroundColor: "#0984e3",
+  footerButtons: {
+    // backgroundColor: "#0984e3",
     marginTop: 20,
     width: "100%",
-    paddingHorizontal: 50,
+    paddingHorizontal: 150,
     borderRadius: 5,
     paddingHorizontal: 50
   }

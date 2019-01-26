@@ -55,6 +55,7 @@ class LoginFormScreen extends React.Component {
               textContentType="password"
               placeholder="Enter password"
               name="password"
+              secureTextEntry={true}
               value={values.password || ""}
               onChangeText={inputValue => {
                 onChangeInfo({ name: "password", value: inputValue });

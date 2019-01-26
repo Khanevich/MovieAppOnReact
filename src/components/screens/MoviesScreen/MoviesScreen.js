@@ -95,6 +95,7 @@ const styles = StyleSheet.create({
     width: SCREEN_WIDTH,
     height: SCREEN_HEIGHT / 2,
     flex: 1,
+    justifyContent: "space-between",
     backgroundColor: "#FFFF"
   },
   flatlist: {

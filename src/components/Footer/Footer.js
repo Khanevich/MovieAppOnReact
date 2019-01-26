@@ -10,11 +10,11 @@ class Footer extends React.Component {
     const { prevPage, nextPage } = this.props.moviesPageStore;
     return (
       <View style={styles.footer}>
-        <Button title="Prev" style={styles.buttonContainer} onPress={prevPage}>
+        <Button title="Prev" style={styles.footerButtons} onPress={prevPage}>
           Previous
         </Button>
 
-        <Button title="Next" style={styles.buttonContainer} onPress={nextPage}>
+        <Button title="Next" style={styles.footerButtons} onPress={nextPage}>
           Next
         </Button>
       </View>

@@ -13,10 +13,10 @@ export default StyleSheet.create({
     width: SCREEN_WIDTH - 90,
     borderWidth: 1
   },
-  italic: {
+  text: {
     fontStyle: "italic"
   },
-  row: {
+  info: {
     flexDirection: "row",
     alignItems: "center",
     fontSize: 12

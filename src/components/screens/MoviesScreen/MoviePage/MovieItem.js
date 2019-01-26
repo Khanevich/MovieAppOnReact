@@ -20,13 +20,7 @@ class MovieItem extends React.Component {
           <View>
             <View style={styles.row}>
               <Text h4>Год: </Text>
-              <Text style={styles.italic}>
-                {String(item.release_date).split("-")[0]}
-              </Text>
-            </View>
-            <View style={styles.row}>
-              <Text>Язык оригинала: </Text>
-              <Text style={styles.italic}>{`${item.original_language}`}</Text>
+              <Text style={styles.italic}>{item.release_date}</Text>
             </View>
             <View style={styles.vote}>
               <PercentageCircle

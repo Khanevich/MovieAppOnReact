@@ -14,7 +14,7 @@ export default StyleSheet.create({
   avatar: {
     height: 40,
     width: 40,
-    borderRadius: 50
+    borderRadius: 20
   },
   icon: {
     color: "#FFFF",
